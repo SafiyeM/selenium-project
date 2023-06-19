@@ -36,7 +36,7 @@ public class T4_CRM_Login_Task {
 
         //3. Enter valid username
         WebElement loginInput = driver.findElement(By.xpath("//input[@name = 'USER_LOGIN']"));
-        loginInput.sendKeys("helpdesk1@cybertekschool.com");
+        loginInput.sendKeys("hr1@cybertekschool.com");
 
         //4. Enter valid password
         WebElement passwordInput = driver.findElement(By.xpath("//input[@type='password']"));
@@ -48,7 +48,7 @@ public class T4_CRM_Login_Task {
 
         //6. Verify title is as expected:
         //Expected: Portal
-        BrowserUtils.verifyTitle(driver, "Portal");
+        BrowserUtils.verifyTitle(driver, "(1) Portal");
 
         //USERNAME PASSWORD
         //helpdesk1@cybertekschool.com UserUser

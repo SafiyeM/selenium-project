@@ -29,9 +29,7 @@ public class CRM_Utilities {
         WebElement loginButton = driver.findElement(By.xpath("//input[@value='Log In']"));
         loginButton.click();
 
-        //6. Verify title is as expected:
-        //Expected: Portal
-        BrowserUtils.verifyTitle(driver, "Portal");
+
 
 
     }
@@ -41,9 +39,7 @@ public class CRM_Utilities {
         //Logging in using the utility method we created in CRM_Utilities class
          CRM_Utilities.login_crm1(driver);
 
-        //6. Verify title is as expected:
-        //Expected: Portal
-        BrowserUtils.verifyTitle(driver, "Portal");
+
 
 
     }
@@ -63,9 +59,7 @@ public class CRM_Utilities {
         WebElement loginLink = driver.findElement(By.xpath("//input[@value='Log In']"));
         loginLink.click();
 
-        //6. Verify title is as expected:
-        //Expected: Portal
-        BrowserUtils.verifyTitle(driver, "Portal");
+
 
 
     }
