@@ -25,14 +25,28 @@ public abstract class TestBase {
         // to read this file, we use ConfigurationReader and call getProperty() method and pass our String key "browser",
         // and it will read the value (in this case: chrome)
 
+        //Driver class will handle driver setting up line of codes
+        //Since we are using Driver class, we will not need to use setting up browser drivers codes
         driver = WebDriverFactory.getDriver(ConfigurationReader.getProperty("browser"));
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+        // After we implement Driver class singleton design pattern in our project,
+        // we will not need above codes instead we will determine common line of codes
+        // from most test methods to implement in this class
+
+        //we can use this cass for navigating to the page
+        //driver.get("URL of app")
 
     }
 
     @AfterMethod
     public void tearDownMethod(){
+
         driver.quit();
+
+        //Driver.closeDriver();
+
+        //Taking screenshot codes here to get screenshot of failing Test after they done
     }
 }
